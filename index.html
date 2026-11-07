@@ -144,6 +144,13 @@
   .venue { margin-top: 4px; font-size: 16.5px; color: var(--muted); }
   .venue i { font-style: italic; }
   .detail { margin-top: 4px; font-size: 16.5px; color: var(--muted); }
+  .inline-link {
+    color: var(--text);
+    text-decoration: underline; text-decoration-color: var(--faint);
+    text-decoration-thickness: 1px; text-underline-offset: 4px;
+    transition: color .15s ease, text-decoration-color .15s ease;
+  }
+  .inline-link:hover { color: var(--accent); text-decoration-color: var(--accent); }
 
   /* 상장 썸네일 */
   .cert {
@@ -268,7 +275,7 @@
         <div class="what">
           <p class="title">석사과정 <span class="en">M.S. Student</span></p>
           <p class="venue">국립부경대학교 빅데이터융합학과</p>
-          <p class="detail">지도교수: 지준화</p>
+          <p class="detail">지도교수: <a class="inline-link" href="https://igdsl.github.io/" target="_blank" rel="noopener">지준화</a></p>
         </div>
       </article>
       <article class="entry">
