@@ -1,0 +1,8 @@
+# 상장·수료증 원본: 생년월일·학번 등 개인정보가 그대로 있어서 공개 저장소에 올리지 않음.
+# 사이트에는 가림 처리한 assets/certificates/ 사본만 쓴다.
+awards/
+certificates/
+
+# 작업용 메모 (논문·학회 발표 정리) — 사이트에는 필요 없음
+papers/
+conferences/

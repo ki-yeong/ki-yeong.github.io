@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문기영 | Ki-Yeong Mun</title>
+<meta name="description" content="문기영 (Ki-Yeong Mun) — 국립부경대학교 석사과정. 위성영상과 딥러닝을 활용한 북극 해빙 이동 추정, 위성영상 정합, 해양 원격탐사.">
+<meta property="og:title" content="문기영 | Ki-Yeong Mun">
+<meta property="og:description" content="위성영상 · 딥러닝 · 북극 해빙 연구">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --bg: #fbfbfa;
+    --text: #1a1a1e;
+    --muted: #5f5f6a;
+    --faint: #94949e;
+    --line: #e6e6ea;
+    --accent: #1d5f8c;
+    --photo-ring: #e4e4e8;
+    color-scheme: light;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 40px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    letter-spacing: -0.005em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  p { margin: 0; }
+
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px 104px;
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 88px;
+  }
+
+  /* ---------- 왼쪽 프로필 ---------- */
+  /* 사이드바 폭 = 가장 긴 글줄 폭, 사진은 그 폭에 맞춤 */
+  .side { position: sticky; top: 80px; align-self: start; width: fit-content; max-width: 100%; }
+  .photo {
+    display: block;
+    width: 0; min-width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: 50% 10%;
+    border-radius: 32px;
+    background: #fff;
+    box-shadow: 0 0 0 1px var(--photo-ring);
+  }
+  .name { margin: 30px 0 0; font-size: 32px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.25; }
+  .name-en { display: block; margin-top: 6px; font-size: 16.5px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .role { margin-top: 18px; font-size: 15.5px; color: var(--muted); line-height: 1.6; }
+
+  .contact { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 12px; }
+  .contact a {
+    display: inline-flex; align-items: center; gap: 11px;
+    font-size: 15px; color: var(--text);
+    transition: color .15s ease;
+  }
+  .contact a:hover { color: var(--accent); }
+  .contact svg { width: 19px; height: 19px; flex: none; }
+  .ico-mail { color: var(--muted); }
+  .contact a:hover .ico-mail { color: var(--accent); }
+
+  .toc { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--line); display: grid; gap: 4px; }
+  .toc a {
+    position: relative;
+    padding: 7px 0 7px 16px;
+    font-size: 17px; color: var(--faint);
+    transition: color .15s ease;
+  }
+  .toc a::before {
+    content: ""; position: absolute; left: 0; top: 50%;
+    width: 2px; height: 0; background: var(--accent);
+    transform: translateY(-50%); transition: height .2s ease;
+  }
+  .toc a:hover { color: var(--text); }
+  .toc a.active { color: var(--text); font-weight: 600; }
+  .toc a.active::before { height: 17px; }
+
+  /* ---------- 본문 ---------- */
+  main { min-width: 0; }
+  section { padding-bottom: 68px; margin-bottom: 68px; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; margin-bottom: 0; }
+
+  .eyebrow {
+    display: block; margin-bottom: 6px;
+    font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  h2 { margin: 0 0 36px; font-size: 27px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.3; }
+  h2 .count { margin-left: 7px; font-size: 16px; font-weight: 600; color: var(--faint); vertical-align: 3px; }
+  h3.group {
+    margin: 44px 0 22px; font-size: 15px; font-weight: 600; color: var(--muted);
+    display: flex; align-items: center; gap: 12px;
+  }
+  h3.group:first-of-type { margin-top: 0; }
+  h3.group span { font-weight: 500; color: var(--faint); }
+  h3.group::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .entry {
+    display: grid;
+    grid-template-columns: 104px minmax(0, 1fr);
+    grid-template-areas: "when what";
+    column-gap: 24px;
+    margin-bottom: 30px;
+  }
+  .entry:last-child { margin-bottom: 0; }
+  .entry.has-cert {
+    grid-template-columns: 104px minmax(0, 1fr) 60px;
+    grid-template-areas: "when what cert";
+  }
+  .when {
+    grid-area: when;
+    font-size: 15px; color: var(--faint); font-variant-numeric: tabular-nums;
+    padding-top: 3px; white-space: nowrap;
+  }
+  .what { grid-area: what; min-width: 0; }
+  .title { display: inline; font-size: 18px; font-weight: 600; line-height: 1.55; letter-spacing: -0.01em; }
+  .title .en { color: var(--faint); font-weight: 500; }
+  a.title {
+    background-image: linear-gradient(var(--accent), var(--accent));
+    background-size: 0 1px; background-repeat: no-repeat; background-position: 0 100%;
+    transition: color .15s ease, background-size .25s ease;
+  }
+  a.title:hover { color: var(--accent); background-size: 100% 1px; }
+  .authors { margin-top: 7px; font-size: 16.5px; color: var(--muted); }
+  .authors b { color: var(--text); font-weight: 600; }
+  .venue { margin-top: 4px; font-size: 16.5px; color: var(--muted); }
+  .venue i { font-style: italic; }
+  .detail { margin-top: 4px; font-size: 16.5px; color: var(--muted); }
+
+  /* 상장 썸네일 */
+  .cert {
+    grid-area: cert; align-self: start;
+    display: block; width: 60px; padding: 0;
+    border: 0; background: none; cursor: zoom-in;
+    border-radius: 8px;
+  }
+  .cert img {
+    display: block; width: 100%; aspect-ratio: 5 / 7;
+    object-fit: cover; object-position: 50% 0;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px var(--line), 0 1px 2px rgba(0,0,0,.04);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .cert:hover img, .cert:focus-visible img {
+    transform: translateY(-3px);
+    box-shadow: 0 0 0 1px var(--line), 0 10px 24px rgba(0,0,0,.12);
+  }
+  .cert:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* 크게 보기 */
+  .lightbox {
+    padding: 0; border: 0; background: transparent;
+    max-width: 94vw; max-height: 94vh; overflow: visible;
+  }
+  .lightbox::backdrop { background: rgba(8, 10, 14, .82); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .lightbox[open] { animation: pop .18s ease-out; }
+  @keyframes pop { from { opacity: 0; transform: scale(.97); } to { opacity: 1; transform: none; } }
+  .lightbox figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .lightbox img {
+    display: block; max-width: 92vw; max-height: 84vh; width: auto; height: auto;
+    border-radius: 10px; background: #fff;
+    box-shadow: 0 24px 60px rgba(0,0,0,.45);
+  }
+  .lightbox figcaption { color: #e9e9ed; font-size: 15px; text-align: center; max-width: 80vw; }
+  .lightbox .close {
+    position: fixed; top: 18px; right: 18px;
+    width: 42px; height: 42px; border-radius: 999px; border: 0;
+    background: rgba(255,255,255,.12); color: #fff; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .lightbox .close:hover { background: rgba(255,255,255,.22); }
+  .lightbox .close svg { width: 20px; height: 20px; }
+
+  footer { margin-top: 68px; font-size: 14px; color: var(--faint); }
+
+  /* ---------- 모바일 ---------- */
+  @media (max-width: 900px) {
+    body { font-size: 16px; }
+    .wrap { grid-template-columns: 1fr; gap: 0; padding: 40px 20px 72px; }
+    .side { position: static; width: auto; display: grid; grid-template-columns: 96px 1fr; column-gap: 20px; align-items: center; margin-bottom: 52px; }
+    .photo { width: 96px; min-width: 0; border-radius: 22px; grid-row: span 2; }
+    .name { margin: 0; font-size: 26px; }
+    .name-en { font-size: 15px; }
+    .role { margin-top: 6px; font-size: 14.5px; }
+    .contact { grid-column: 1 / -1; margin-top: 24px; }
+    .toc { display: none; }
+    section { padding-bottom: 52px; margin-bottom: 52px; }
+    h2 { font-size: 24px; margin-bottom: 28px; }
+    .entry { grid-template-columns: minmax(0, 1fr); grid-template-areas: "when" "what"; }
+    .entry.has-cert { grid-template-columns: minmax(0, 1fr) 60px; grid-template-areas: "when cert" "what cert"; column-gap: 16px; }
+    .cert { width: 60px; }
+    .title { font-size: 17px; }
+    .authors, .venue, .detail { font-size: 15.5px; }
+    .when { font-size: 14px; padding-top: 0; }
+  }
+
+  /* ---------- 인쇄 ---------- */
+  @media print {
+    :root { --bg: #fff; --text: #000; --muted: #333; --faint: #555; --line: #ccc; --accent: #000; }
+    .wrap { display: block; padding: 0; }
+    .side { position: static; }
+    .photo { width: 160px; min-width: 0; }
+    .toc, .cert, .lightbox { display: none; }
+    .entry.has-cert { grid-template-columns: 104px minmax(0, 1fr); grid-template-areas: "when what"; }
+    section { padding-bottom: 24px; margin-bottom: 24px; }
+    .entry { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <aside class="side">
+    <img class="photo" src="증명사진.png" alt="문기영 프로필 사진">
+    <div>
+      <h1 class="name">문기영<span class="name-en">Ki-Yeong Mun</span></h1>
+      <p class="role">국립부경대학교 빅데이터융합학과<br>석사과정</p>
+    </div>
+    <ul class="contact">
+      <li>
+        <a href="mailto:mansrl0929@pukyong.ac.kr">
+          <svg class="ico-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>
+          mansrl0929@pukyong.ac.kr
+        </a>
+      </li>
+      <li>
+        <a href="https://orcid.org/0009-0007-0737-5218" target="_blank" rel="noopener">
+          <svg viewBox="0 0 256 256" aria-hidden="true"><path fill="#A6CE39" d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z"/><path fill="#fff" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7C191.7 111.2 178 93 148 93h-23.7v79.4zM88.7 56.8c0 5.5-4.5 10.1-10.1 10.1s-10.1-4.6-10.1-10.1 4.5-10.1 10.1-10.1 10.1 4.6 10.1 10.1z"/></svg>
+          0009-0007-0737-5218
+        </a>
+      </li>
+    </ul>
+    <nav class="toc" aria-label="목차">
+      <a href="#education">학력</a>
+      <a href="#publications">논문</a>
+      <a href="#presentations">학회 발표</a>
+      <a href="#awards">수상 · 장학</a>
+      <a href="#experience">활동</a>
+    </nav>
+  </aside>
+
+  <main>
+
+    <!-- 확인 필요: 대학원 학과명, 지도교수, 학사 졸업 연도 -->
+    <section id="education">
+      <span class="eyebrow">Education</span>
+      <h2>학력</h2>
+      <article class="entry">
+        <time class="when">2026 –</time>
+        <div class="what">
+          <p class="title">석사과정 <span class="en">M.S. Student</span></p>
+          <p class="venue">국립부경대학교 빅데이터융합학과</p>
+          <p class="detail">지도교수: 지준화</p>
+        </div>
+      </article>
+      <article class="entry">
+        <time class="when">2020 – 2026</time>
+        <div class="what">
+          <p class="title">학사 <span class="en">B.S.</span></p>
+          <p class="venue">국립부경대학교 데이터정보과학부 빅데이터융합전공</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="publications">
+      <span class="eyebrow">Publications</span>
+      <h2>논문<span class="count">4</span></h2>
+
+      <h3 class="group">국제 학술지 <span>International Journals</span></h3>
+      <article class="entry">
+        <time class="when">2026.06</time>
+        <div class="what">
+          <a class="title" href="https://doi.org/10.1109/JSTARS.2026.3700216" target="_blank" rel="noopener">Spatiotemporal Gap-Filling of GOCI-II Chlorophyll-a Using Attention-Based Partial Convolution Model</a>
+          <p class="authors">Chae-Eun Kim, Bo-Ram Kim, <b>Ki-Yeong Mun</b>, Junhwa Chi</p>
+          <p class="venue"><i>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</i>, vol. 19, pp. 19772–19791</p>
+        </div>
+      </article>
+      <article class="entry">
+        <time class="when">2026.02</time>
+        <div class="what">
+          <a class="title" href="https://doi.org/10.3390/jmse14030307" target="_blank" rel="noopener">AI-Based Interpolation of Ship Dry Docking Operation Data</a>
+          <p class="authors"><b>Ki-Yeong Mun</b>, Tae-Hoon Kim, Jeong-Seok Lee</p>
+          <p class="venue"><i>Journal of Marine Science and Engineering</i>, vol. 14, no. 3, 307</p>
+        </div>
+      </article>
+      <article class="entry">
+        <time class="when">2025.10</time>
+        <div class="what">
+          <a class="title" href="https://doi.org/10.7780/kjrs.2025.41.5.7" target="_blank" rel="noopener">Performance Comparison of Computer Vision and Deep Learning-Based Methods for Satellite Image Registration under Diverse Environmental Conditions</a>
+          <p class="authors"><b>Ki-Yeong Mun</b>, Dahyeon Kang, Junhwa Chi</p>
+          <p class="venue"><i>Korean Journal of Remote Sensing</i> (대한원격탐사학회지), vol. 41, no. 5, pp. 787–801</p>
+        </div>
+      </article>
+
+      <h3 class="group">국제 학술대회 논문 <span>Conference Proceedings</span></h3>
+      <article class="entry">
+        <time class="when">2026.07</time>
+        <div class="what">
+          <a class="title" href="https://doi.org/10.5194/isprs-archives-XLIX-B3-2026-817-2026" target="_blank" rel="noopener">Deep learning–based enhancement of feature tracking for sea ice drift estimation</a>
+          <p class="authors"><b>Ki-Yeong Mun</b>, Junhwa Chi</p>
+          <p class="venue"><i>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</i>, vol. XLIX-B3-2026, pp. 817–823</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="presentations">
+      <span class="eyebrow">Presentations</span>
+      <h2>학회 발표<span class="count">5</span></h2>
+
+      <h3 class="group">국제 학술대회 <span>International</span></h3>
+      <article class="entry">
+        <time class="when">2026.07</time>
+        <div class="what">
+          <p class="title">Deep learning–based enhancement of feature tracking for sea ice drift estimation</p>
+          <p class="authors"><b>Ki-Yeong Mun</b>, Junhwa Chi</p>
+          <p class="venue">XXV ISPRS Congress 2026, Toronto, Canada</p>
+        </div>
+      </article>
+
+      <h3 class="group">국내 학술대회 <span>Domestic</span></h3>
+      <article class="entry">
+        <time class="when">2026.11</time>
+        <div class="what">
+          <p class="title">미래 바람 정보 결합을 통한 북극 해빙 표류의 다중 시점 예측</p>
+          <p class="authors">지준화, <b>문기영</b>, 김보람</p>
+          <p class="venue">2026 (사)GeoAI데이터학회 추계학술대회</p>
+        </div>
+      </article>
+      <article class="entry">
+        <time class="when">2026.10</time>
+        <div class="what">
+          <p class="title">SAR 특화 딥러닝 기반 밀집 특징점 매칭을 통한 북극 해빙 표류 벡터장 산출 정확도 향상 연구</p>
+          <p class="authors"><b>문기영</b>, 지준화</p>
+          <p class="venue">대한원격탐사학회 학술대회</p>
+        </div>
+      </article>
+      <article class="entry">
+        <time class="when">2026.09</time>
+        <div class="what">
+          <p class="title">SAR 위성 영상을 활용한 북극해빙 이동벡터 산출을 위한 딥러닝 기반 밀집 특징 매칭 연구</p>
+          <p class="authors"><b>문기영</b>, 이선구, 홍지훈, 지준화</p>
+          <p class="venue">2026 한국항공우주시스템공학회 추계학술대회</p>
+        </div>
+      </article>
+      <article class="entry">
+        <time class="when">2025.11</time>
+        <div class="what">
+          <p class="title">컴퓨터비전과 딥러닝 기반 특징점 검출 및 매칭을 통한 고해상도 위성영상 정합 성능 평가</p>
+          <p class="authors"><b>문기영</b>, 지준화</p>
+          <p class="venue">2025 (사)GeoAI데이터학회 추계학술대회</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="awards">
+      <span class="eyebrow">Honors &amp; Awards</span>
+      <h2>수상 · 장학<span class="count">7</span></h2>
+
+      <article class="entry has-cert">
+        <time class="when">2026.11</time>
+        <div class="what">
+          <p class="title">2026 해양과학 AI×빅데이터 경진대회</p>
+          <p class="venue">해양수산과학기술진흥원 · 원장상</p>
+        </div>
+        <button class="cert" type="button" data-full="assets/certificates/2026-11-04_2026_해양과학AIx빅데이터경진대회_입상.png">
+          <img src="assets/certificates/thumbs/2026-11-04_2026_해양과학AIx빅데이터경진대회_입상.png" alt="2026 해양과학 AI×빅데이터 경진대회 상장" loading="lazy">
+        </button>
+      </article>
+      <article class="entry has-cert">
+        <time class="when">2026.10</time>
+        <div class="what">
+          <p class="title">2026 새싹연구 지원사업: SpaceEye-T 영상 활용 경진대회</p>
+          <p class="venue">대한원격탐사학회 · 우수상</p>
+        </div>
+        <button class="cert" type="button" data-full="assets/certificates/2026-10-21_대한원격탐사학회_SpaceEye-T영상활용경진대회_우수상.png">
+          <img src="assets/certificates/thumbs/2026-10-21_대한원격탐사학회_SpaceEye-T영상활용경진대회_우수상.png" alt="SpaceEye-T 영상 활용 경진대회 우수상 상장" loading="lazy">
+        </button>
+      </article>
+      <article class="entry has-cert">
+        <time class="when">2026.08</time>
+        <div class="what">
+          <p class="title">석사우수 장학생 (이공계)</p>
+          <p class="venue">과학기술정보통신부 · 장학</p>
+        </div>
+        <button class="cert" type="button" data-full="assets/certificates/2026-08-31_과학기술정보통신부_석사우수장학생.png">
+          <img src="assets/certificates/thumbs/2026-08-31_과학기술정보통신부_석사우수장학생.png" alt="석사우수 장학증서" loading="lazy">
+        </button>
+      </article>
+      <article class="entry has-cert">
+        <time class="when">2026.02</time>
+        <div class="what">
+          <p class="title">졸업 표창</p>
+          <p class="venue">국립부경대학교 · 총장상</p>
+        </div>
+        <button class="cert" type="button" data-full="assets/certificates/2026-02-20_국립부경대학교_총장표창장.png">
+          <img src="assets/certificates/thumbs/2026-02-20_국립부경대학교_총장표창장.png" alt="국립부경대학교 총장 표창장" loading="lazy">
+        </button>
+      </article>
+      <article class="entry has-cert">
+        <time class="when">2025.12</time>
+        <div class="what">
+          <p class="title">2025학년도 데이터정보과학부 데이터 분석 공모전</p>
+          <p class="venue">국립부경대학교 · 학장상</p>
+        </div>
+        <button class="cert" type="button" data-full="assets/certificates/2025-12-05_데이터정보과학부_데이터분석공모전_우수상.png">
+          <img src="assets/certificates/thumbs/2025-12-05_데이터정보과학부_데이터분석공모전_우수상.png" alt="데이터 분석 공모전 우수상 상장" loading="lazy">
+        </button>
+      </article>
+      <article class="entry has-cert">
+        <time class="when">2025.12</time>
+        <div class="what">
+          <p class="title">제5회 해양과학 빅데이터 경진대회</p>
+          <p class="venue">해양수산과학기술진흥원, 한국해양학회 · 우수상</p>
+        </div>
+        <button class="cert" type="button" data-full="assets/certificates/2025-12-02_제5회_해양과학빅데이터경진대회_우수상.png">
+          <img src="assets/certificates/thumbs/2025-12-02_제5회_해양과학빅데이터경진대회_우수상.png" alt="제5회 해양과학 빅데이터 경진대회 우수상 상장" loading="lazy">
+        </button>
+      </article>
+      <article class="entry has-cert">
+        <time class="when">2024.05</time>
+        <div class="what">
+          <p class="title">Dean's List</p>
+          <p class="venue">국립부경대학교 · 학장상</p>
+        </div>
+        <button class="cert" type="button" data-full="assets/certificates/2024-05-02_정보융합대학_딘스리스트_2023-2학기.png">
+          <img src="assets/certificates/thumbs/2024-05-02_정보융합대학_딘스리스트_2023-2학기.png" alt="Dean's List 상패" loading="lazy">
+        </button>
+      </article>
+    </section>
+
+    <section id="experience">
+      <span class="eyebrow">Experience</span>
+      <h2>활동</h2>
+      <article class="entry has-cert">
+        <time class="when">2024.12</time>
+        <div class="what">
+          <p class="title">동계방학 현장실습</p>
+          <p class="venue">한국해양과학기술원 (KIOST)</p>
+          <p class="detail">2024.12.29 – 2025.02.26</p>
+        </div>
+        <button class="cert" type="button" data-full="assets/certificates/2025-02-26_한국해양과학기술원_동계현장실습_수료증.png">
+          <img src="assets/certificates/thumbs/2025-02-26_한국해양과학기술원_동계현장실습_수료증.png" alt="한국해양과학기술원 동계방학 현장실습 수료증" loading="lazy">
+        </button>
+      </article>
+    </section>
+
+    <footer>최종 업데이트 2026.11</footer>
+  </main>
+</div>
+
+<dialog class="lightbox" aria-label="상장 크게 보기">
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="close" type="button" aria-label="닫기">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+</dialog>
+
+<script>
+  // 스크롤 위치에 맞춰 목차 강조
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+    var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+    function setActive(id) {
+      links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + id); });
+    }
+    function update() {
+      var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      if (atBottom) return setActive(sections[sections.length - 1].id);
+      var line = window.innerHeight * 0.35, current = sections[0].id;
+      sections.forEach(function (s) { if (s.getBoundingClientRect().top <= line) current = s.id; });
+      setActive(current);
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+
+  // 상장 크게 보기
+  (function () {
+    var box = document.querySelector('.lightbox');
+    var img = box.querySelector('img');
+    var cap = box.querySelector('figcaption');
+    document.querySelectorAll('.cert').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var title = btn.closest('.entry').querySelector('.title').textContent.trim();
+        img.src = btn.dataset.full;
+        img.alt = btn.querySelector('img').alt;
+        cap.textContent = title;
+        if (box.showModal) box.showModal(); else window.open(btn.dataset.full, '_blank');
+      });
+    });
+    box.addEventListener('click', function () { box.close(); });
+    box.addEventListener('close', function () { img.removeAttribute('src'); });
+  })();
+</script>
+</body>
+</html>
