@@ -130,6 +130,8 @@
     font-size: 15px; color: var(--faint); font-variant-numeric: tabular-nums;
     padding-top: 3px; white-space: nowrap;
   }
+  /* 기간(2026.04 – 2030.12)은 날짜 칸에 안 들어가서 "–" 뒤에서 줄바꿈 */
+  .when.range { white-space: normal; line-height: 1.6; }
   .what { grid-area: what; min-width: 0; }
   .title { display: inline; font-size: 18px; font-weight: 600; line-height: 1.55; letter-spacing: -0.01em; }
   .title .en { color: var(--faint); font-weight: 500; }
@@ -260,6 +262,7 @@
       <a href="#publications">논문</a>
       <a href="#presentations">학회 발표</a>
       <a href="#awards">수상 · 장학</a>
+      <a href="#projects">연구 과제</a>
       <a href="#experience">활동</a>
     </nav>
   </aside>
@@ -483,6 +486,46 @@
         <button class="cert" type="button" data-full="assets/certificates/2024-05-02_정보융합대학_딘스리스트_2023-2학기.png">
           <img src="assets/certificates/thumbs/2024-05-02_정보융합대학_딘스리스트_2023-2학기.png" alt="Dean's List 상패" loading="lazy">
         </button>
+      </article>
+    </section>
+
+    <section id="projects">
+      <span class="eyebrow">Research Projects</span>
+      <h2>연구 과제<span class="count">5</span></h2>
+      <article class="entry">
+        <time class="when range">2026.07&nbsp;– 2026.12</time>
+        <div class="what">
+          <p class="title">다종 위성영상을 이용한 해빙 농도 및 이동벡터 산출 기술 개발</p>
+          <p class="venue">한국항공우주연구원 (KARI) · 참여연구자</p>
+        </div>
+      </article>
+      <article class="entry">
+        <time class="when range">2026.04&nbsp;– 2030.12</time>
+        <div class="what">
+          <p class="title">CubeSat 기반 해양환경감시 Space+AI 융합인재양성 플랫폼 구축</p>
+          <p class="venue">우주항공청 (KASA) · 참여연구자</p>
+        </div>
+      </article>
+      <article class="entry">
+        <time class="when range">2026.04&nbsp;– 2029.12</time>
+        <div class="what">
+          <p class="title">AI 이기종 센서 정보 기반 유빙 탐지·예측·위험도 평가 및 최적항 산출 ICE Navigation 개발</p>
+          <p class="venue">한국산업기술기획평가원 (KEIT) · 참여연구자</p>
+        </div>
+      </article>
+      <article class="entry">
+        <time class="when range">2024.10&nbsp;– 2026.12</time>
+        <div class="what">
+          <p class="title">인공지능 기반 상세 북극해빙 예측 기술 개발</p>
+          <p class="venue">극지연구소 (KOPRI) · 참여연구자</p>
+        </div>
+      </article>
+      <article class="entry">
+        <time class="when range">2024.06&nbsp;– 2025.01</time>
+        <div class="what">
+          <p class="title">사용자 친화형 국토위성영상 생산 고도화 기반 연구</p>
+          <p class="venue">국토지리정보원 (NGII) · 참여연구자</p>
+        </div>
       </article>
     </section>
 
